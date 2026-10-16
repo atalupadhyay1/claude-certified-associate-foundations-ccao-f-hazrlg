@@ -1,0 +1,151 @@
+/* Static reference data: exam blueprint, weights, the 4D framework, the Meridian Partners case. */
+window.CCAO = window.CCAO || {};
+
+window.CCAO.meta = {
+  courseSlug: "claude-certified-associate-foundations-ccao-f-hazrlg",
+  courseTitleTr: "Claude Certified Associate Foundations: CCAO-F Hazırlığı",
+  courseTitleEn: "Claude Certified Associate Foundations: CCAO-F Preparation",
+  instructor: "Dr Amar Massoud (Türkçe)",
+  siteNoteTr: "Ders başlıkları orijinal Türkçe adlarıyla korunmuştur; içerik İngilizce.",
+  buildNote:
+    "::info source | These notes are built from three public sources: (1) the **official Claude Certified Associate – Foundations Exam Guide, v1.0, effective July 2026**; (2) this course's **published syllabus** — all 8 sections, 35 lesson titles, durations and the ten stated learning outcomes; and (3) **Anthropic's published AI Fluency / Claude product documentation**. They are a study companion *to* the video course, not a transcript of it. Where the course coins a name for a framework (for example the exact wording of \"the five things Claude always does\"), the notes reconstruct the underlying idea and say so — always cross-check a framework's exact labels against the video you watched.\n::warn unofficial | This is independent, unofficial preparation material. It is not affiliated with or endorsed by Anthropic or Pearson VUE. Domain weights below are the figures reported by third-party exam guides and are **not** published by Anthropic. Product behaviour changes; verify current behaviour in Anthropic's documentation before you rely on it in an exam item or at work.",
+  examFacts: [
+    ["Credential", "Claude Certified Associate – Foundations"],
+    ["Exam code", "CCAO-F"],
+    ["Items", "60"],
+    ["Item format", "Multiple-choice and multiple-response; each item states how many responses to select"],
+    ["Time limit", "120 minutes (~2 min/item)"],
+    ["Delivery", "Proctored — online proctored and/or Pearson VUE test centre"],
+    ["Passing score", "Scaled 720 on a 100–1,000 scale"],
+    ["Exam fee", "US$99 (before any partner-tier discount)"],
+    ["Validity", "12 months from the award date"],
+    ["Result report", "Pass/fail + scaled score + percent-correct by domain"],
+    ["Prerequisites", "None mandatory. No coding, no API experience"],
+    ["Registration", "Anthropic Partner Academy → Pearson VUE (partner-organisation access required)"],
+    ["Retake wait", "14 days after 1st failure, 30 after 2nd, 90 after 3rd; max 4 attempts per rolling 12 months"],
+    ["Reschedule", "Cancel or move up to 24 hours before the appointment; later forfeits the fee"],
+    ["Renewal", "Free non-proctored assessment on the Partner Academy if renewed on time; a lapsed credential requires the full exam at full fee"]
+  ],
+  validate: "The guide states the credential \u201cvalidates that an individual can apply Claude to complete business and productivity tasks with minimal guidance.\u201d Every item you will see is a *judgement* item wearing that sentence.",
+
+  domains: [
+    { code: "D1", name: "Prompting and Task Execution",      tr: "İstem Yazımı ve Görev Yürütme",            weight: 14, items: 8,
+      d: "D3", lessons: [3.1, 3.2, 3.3, 3.4],
+      objs: ["Create effective prompts for business and technical tasks",
+             "Apply task decomposition techniques to structure complex requests",
+             "Iterate prompts to improve output quality",
+             "Adapt prompting strategies based on task type (analysis, research, drafting, brainstorming)"] },
+    { code: "D2", name: "Output Evaluation and Validation",  tr: "Çıktıyı Değerlendirme ve Doğrulama",       weight: 21, items: 13,
+      d: "D3", lessons: [4.1, 4.2, 4.3, 4.4, 4.5, 4.6],
+      objs: ["Evaluate Claude-generated outputs for accuracy and completeness",
+             "Identify hallucinations, inconsistencies, and biases in responses",
+             "Apply fact-checking and validation techniques",
+             "Determine when human review or additional verification is required",
+             "Edit, adapt, refine, and compare outputs for the intended audience",
+             "Organize and curate information and select appropriate output formats (artifacts, inline, structured data)"] },
+    { code: "D3", name: "Product and Model Selection",       tr: "Ürün ve Model Seçimi",                     weight: 12, items: 7,
+      d: "D2", lessons: [2.1, 2.2, 2.3, 2.4],
+      objs: ["Select appropriate Claude product features (Projects, research mode, chat, artifacts)",
+             "Differentiate between Claude model types (Haiku, Sonnet, Opus)",
+             "Align model selection with task requirements (cost, speed, quality)",
+             "Understand and manage context limitations and memory considerations (when to restart, summarize, or persist)"] },
+    { code: "D4", name: "Workflow Integration and Solution Design", tr: "İş Akışı Entegrasyonu ve Çözüm Tasarımı", weight: 16, items: 10,
+      d: "D1", lessons: [5.1, 5.2, 5.3, 5.4, 5.5],
+      objs: ["Apply Claude to analyze requirements and use cases",
+             "Leverage Claude for research, planning, and process optimization",
+             "Use Claude to support solution design, development, and iteration",
+             "Integrate Claude into existing workflows to augment or redesign them",
+             "Communicate Claude's value and limitations to stakeholders"] },
+    { code: "D5", name: "Configuration and Knowledge Management", tr: "Yapılandırma ve Bilgi Yönetimi",     weight: 12, items: 7,
+      d: "D4", lessons: [6.1, 6.2, 6.3, 6.4],
+      objs: ["Configure Claude Projects with instructions and knowledge sources",
+             "Manage uploaded knowledge and connectors (e.g. Google Drive, Gmail)",
+             "Create effective system-level instructions",
+             "Inform, maintain, and update Claude configurations, knowledge sources, and instructions"] },
+    { code: "D6", name: "Governance, Risk, and Responsible Use", tr: "Yönetişim, Risk ve Sorumlu Kullanım",  weight: 15, items: 9,
+      d: "D4", lessons: [7.1, 7.2, 7.3, 7.4, 7.5],
+      objs: ["Identify appropriate and inappropriate use cases",
+             "Apply data-sensitivity, regulatory, and privacy considerations",
+             "Follow organizational AI policies and governance standards",
+             "Understand the ethical implications of AI usage"] },
+    { code: "D7", name: "Troubleshooting and Optimization",  tr: "Sorun Giderme ve Optimizasyon",            weight: 10, items: 6,
+      d: "D1", lessons: [8.1, 8.2, 8.3, 8.4],
+      objs: ["Identify, diagnose, and resolve issues with underperforming prompts or poor outputs",
+             "Adjust approach based on feedback and results",
+             "Optimize workflows for efficiency and effectiveness"] }
+  ],
+
+  /* The course teaches through Anthropic's AI Fluency "4D" competencies; this table maps them onto the exam domains. */
+  fourD: [
+    { d: "Delegation", tr: "Devretme",
+      q: "What work should go to Claude, and what stays with a human?",
+      mode: "Decided *before* you write anything",
+      domains: "D4 (workflow), D6 (governance)",
+      lessons: "2.2 · 2.3 · 5.4 · 7.1" },
+    { d: "Description", tr: "Tanımlama",
+      q: "How do I say it so the first draft is already close?",
+      mode: "The prompt, the Project, the instructions",
+      domains: "D1 (prompting), D5 (configuration)",
+      lessons: "3.1 · 3.2 · 3.3 · 3.4 · 6.1 · 6.4" },
+    { d: "Discernment", tr: "Ayırt etme",
+      q: "Is this output true, complete, consistent and fit for *this* audience?",
+      mode: "Runs *after* the output exists, and loops back into Description",
+      domains: "D2 (evaluation), D7 (troubleshooting)",
+      lessons: "4.1 · 4.2 · 4.3 · 4.6 · 8.1 · 8.2" },
+    { d: "Diligence", tr: "Özen / sorumluluk",
+      q: "Was this responsible, permitted, disclosed — and who is accountable?",
+      mode: "Wraps the whole loop; accountability is never delegated",
+      domains: "D6 (governance), D2 (review gates), D4 (stakeholders)",
+      lessons: "4.4 · 4.5 · 5.5 · 6.3 · 7.2 · 7.3 · 7.4 · 7.5" }
+  ],
+
+  modes: [
+    { name: "Automation", tr: "Otomasyon", what: "Claude executes a specific task from your instructions.",
+      give: "Repetition, volume, formatting, first-pass extraction", keep: "Nothing — but you own the sampling check" },
+    { name: "Augmentation", tr: "İyileştirme / ortak çalışma", what: "You and Claude collaborate; each turn is reviewed by you.",
+      give: "Drafting, option generation, structuring, comparison", keep: "Selection, judgement, final wording" },
+    { name: "Agency", tr: "Otonomluk", what: "You shape what Claude knows and how it behaves, and it works on your behalf.",
+      give: "Scoping, configuration, standing instructions, review gates", keep: "The decision itself, and all accountability" }
+  ],
+
+  meridian: {
+    name: "Meridian Partners",
+    blurb:
+      "A mid-sized consulting firm with **three offices (İstanbul, Ankara, İzmir)**, roughly 90 client engagements a year, and **per-client confidentiality obligations written into every engagement letter**. A fabricated statistic in a deck reached a client last quarter; the managing partner responded by **freezing all AI use firm-wide**. The whole course applies each framework to the problems this firm actually has: reopening AI use safely, without a second incident.",
+    cast: [
+      ["Deniz Aydın", "Managing partner", "Froze AI use firm-wide after the invented statistic reached a client. Wants controls, not enthusiasm."],
+      ["Selin Kaya", "Senior associate, engagement lead (Ardan Textiles)", "Owns the client relationship. Every number in her decks has to survive a challenge in the room."],
+      ["Mert Şahin", "Operations analyst", "The heaviest everyday Claude user. Built the report that quietly stopped working."],
+      ["Elif Doğan", "Marketing & communications", "Wants volume and speed on client-facing copy; least interested in provenance."],
+      ["Nazlı Aksoy", "People lead (HR)", "Wants Claude to screen CVs. Needs to be told no, and given the alternative."],
+      ["Burak Yılmaz", "IT & platform administrator", "Controls connectors, seats, Skills enablement and the audit trail. The gatekeeper you must write requests for."],
+      ["Kuzey Logistics", "Client — logistics", "Engagement letter bans uploading any personal data to third-party systems."],
+      ["Poyraz Gıda", "Client — food manufacturing", "Confidential M&A pipeline; leaks are commercially fatal."]
+    ],
+    castNote: "Meridian Partners is the fictional case firm the course runs on from first lesson to last. The people and clients named here are placeholders used by *these notes* to keep the case consistent — treat the situations as the thing to learn, not the names."
+  },
+
+  /* Learning outcomes as published on the course page, each mapped to where it is covered. */
+  outcomes: [
+    { n: 1, tr: "Yedi CCAO-F sınav alanını, resmî olmayan ağırlıklarına göre gerçekçi senaryolara uygulamak",
+      en: "Apply the seven CCAO-F exam domains to realistic scenarios, according to their unofficial weights", where: "1.1 · Blueprint tab" },
+    { n: 2, tr: "Her Claude çıktısını gereksinimlere, kaynak materyale ve mesleki standartlara göre değerlendirmek",
+      en: "Evaluate every Claude output against the requirements, the source material and the professional standard", where: "4.1 · 4.2" },
+    { n: 3, tr: "Halüsinasyonları, eksiksizlik boşluklarını ve iç çelişkileri müşteriye ulaşmadan saptamak",
+      en: "Catch hallucinations, completeness gaps and internal contradictions before they reach the client", where: "4.3" },
+    { n: 4, tr: "Kaynak kısıtlaması, izinli belirsizlik ve denetlenebilir atıflarla doğrulamayı isteme yerleştirmek",
+      en: "Build verification into the prompt: source restriction, permitted uncertainty, auditable citation", where: "4.4" },
+    { n: 5, tr: "Risk, geri alınabilirlik, kitle ve mevzuat riskine göre insan incelemesinin ne zaman şart olduğuna karar vermek",
+      en: "Decide when human review is mandatory using stakes, reversibility, audience and regulatory exposure", where: "4.5" },
+    { n: 6, tr: "İş akışlarını görev devri ölçütlerine göre haritalamak ve her yapay zekâ adımına ait özelliği adlandırmak",
+      en: "Map workflows by delegation criteria and name the feature belonging to each AI step", where: "5.4" },
+    { n: 7, tr: "Project'leri talimatlar, bilgi, Skills ve kapsamlı Memory ile yapılandırmak ve bakımını yapmak",
+      en: "Configure and maintain Projects with instructions, knowledge, Skills and scoped Memory", where: "6.1 · 6.2 · 6.4" },
+    { n: 8, tr: "Kullanım senaryolarını taramak ve gerçekten denetlenebilen inceleme noktaları tanımlamak",
+      en: "Screen use cases and define review checkpoints that are genuinely auditable", where: "7.1 · 7.2" },
+    { n: 9, tr: "Düşük performansı belirtinin zamanlamasından teşhis etmek ve önce en ucuz çözüm sıralamasını uygulamak",
+      en: "Diagnose underperformance from the timing of the symptom and apply the cheapest-fix-first order", where: "8.1 · 8.2" },
+    { n: 10, tr: "Sınava, zayıf alanınızın hangisi olduğunu ve ağırlığını bilerek girmek",
+      en: "Enter the exam knowing which domain is your weak one and how heavily it counts", where: "8.5 · Progress tab" }
+  ]
+};
